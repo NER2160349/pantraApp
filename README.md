@@ -1,1 +1,1 @@
-# pantraApp
+This is Pantra and it helps you keep track of your food (refrigerator, freezer and pantry), reminds you of experation dates, helps with grocery lists. You can also upload recipes and it will automatically tell you what you are missing. You can also see suggestions of which food are recommended to be organic, and you can create a reminder of where an item is cheaper to purchase at! All in one place, on the go. Now you never have to question yourself how many eggs you have at home!
