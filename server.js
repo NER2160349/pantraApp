@@ -18,9 +18,34 @@ mongoose.connect(MONGO_URI,{
         process.exit(1); // Exit process on MongoDB connection error
     });
 
+// Middleware for parsing JSON bodies
+app.use(express.json());
+
+// Middleware for serving static files (like CSS, images)
+app.use(express.static('public'));
+
 // Define routes
 app.get('/', (req, res) => {
-    res.send('Hello World');
+    res.sendFile(__dirname + '/pantraApp/index.html');
+});
+
+// Example API route to get pantry items
+app.get('/api/pantry/items', (req, res) => {
+    // Simulated pantry items (replace with database logic)
+    let pantryItems = [
+        { name: 'Rice', quantity: 2 },
+        { name: 'Beans', quantity: 3 },
+        { name: 'Tomatoes', quantity: 5 }
+    ];
+    res.json(pantryItems);
+});
+
+// Example API route to add a new pantry item
+app.post('/api/pantry/add', (req, res) => {
+    // Logic to add a new pantry item to your database (replace with actual logic)
+    console.log(req.body); // Assuming req.body contains item data
+    // Perform database operation and respond
+    res.json({ message: 'Item added successfully' });
 });
 
 // Start server
