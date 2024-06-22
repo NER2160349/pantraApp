@@ -26,7 +26,7 @@ app.use(express.static('public'));
 
 // Define routes
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/pantraApp/index.html');
+    res.sendFile(__dirname + '/index.html');
 });
 
 // Example API route to get pantry items
