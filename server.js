@@ -22,11 +22,14 @@ mongoose.connect(MONGO_URI,{
 app.use(express.json());
 
 // Middleware for serving static files (like CSS, images)
-app.use(express.static('public'));
+app.use(express.static(__dirname));
 
 // Define routes
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
+});
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/menu.html');
 });
 
 // Example API route to get pantry items
