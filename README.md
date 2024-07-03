@@ -15,6 +15,7 @@ PantraApp is a personal web application designed to help users store and manage 
 - View history of added items
 - Responsive design
 - Grocery shopping list
+- Responsive design for mobile and desktop use
 
 ## Technologies Used
 - **Frontend**: HTML, CSS, JavaScript
