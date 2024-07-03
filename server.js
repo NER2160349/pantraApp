@@ -28,9 +28,7 @@ app.use(express.static(__dirname));
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/menu.html');
-});
+
 
 // Example API route to get pantry items
 app.get('/api/pantry/items', (req, res) => {
@@ -45,7 +43,7 @@ app.get('/api/pantry/items', (req, res) => {
 
 // Example API route to add a new pantry item
 app.post('/api/pantry/add', (req, res) => {
-    // Logic to add a new pantry item to your database (replace with actual logic)
+    // Logic to add a new pantry item to database (replace with actual logic)
     console.log(req.body); // Assuming req.body contains item data
     // Perform database operation and respond
     res.json({ message: 'Item added successfully' });
